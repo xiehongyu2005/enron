@@ -14,9 +14,22 @@
     enron_data["SKILLING JEFFREY K"]["bonus"] = 5600000
     
 """
-
+from __future__ import division
 import pickle
 
 enron_data = pickle.load(open("../final_project/final_project_dataset.pkl", "r"))
 
+
+count=0
+for k,v in enron_data.items():
+    count = count+1
+    if count==66:
+        print k
+#        for f,s in v.items():
+#           if f == 'total_payments' and s == 'NaN':
+#               count=count+1
+# print count/len(enron_data)
+# print len(enron_data)
+#
+# print enron_data[str.upper("FASTOW ANDREW S")]
 

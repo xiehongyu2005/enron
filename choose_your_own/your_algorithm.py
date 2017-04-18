@@ -31,14 +31,16 @@ plt.show()
 ### your code here!  name your classifier object clf if you want the 
 ### visualization code (prettyPicture) to show you the decision boundary
 
-
-
+from sklearn.ensemble import RandomForestClassifier, AdaBoostClassifier
+ada_clf = RandomForestClassifier(n_estimators=10,criterion='entropy')
+ada_clf.fit(features_train,labels_train)
+print ada_clf.score(features_test,labels_test)
 
 
 
 
 
 try:
-    prettyPicture(clf, features_test, labels_test)
+    prettyPicture(ada_clf, features_test, labels_test)
 except NameError:
     pass
